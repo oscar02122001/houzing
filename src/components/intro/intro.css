@@ -1,0 +1,18 @@
+
+.intro-wrap{
+    margin-top: 96px;
+    text-align: center;
+}
+.intro-cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.intro-cards :last-child{
+  margin-right: 0;
+}
+.intro-title{
+   margin: 0;
+   margin-bottom: 8px;
+}
