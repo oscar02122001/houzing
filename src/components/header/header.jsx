@@ -4,6 +4,9 @@ import "./header.css";
 import ModalAdvanced from "./advanced";
 
 class Headerrr extends React.Component {
+  state = {
+    toggle: false,
+  };
   render() {
     return (
       <div className="header-container">
@@ -35,6 +38,7 @@ class Headerrr extends React.Component {
           <button className="header-login">login</button>
         </div>
         <div className="search-tools">
+          {this.state.toggle && <ModalAdvanced />}
           <div className="container search-wrap">
             <div className="input-wrap">
               <input
@@ -43,7 +47,12 @@ class Headerrr extends React.Component {
                 placeholder="Enter an address, neighborhood, city, or ZIP code"
               />
             </div>
-            <button className="advanced">Advanced</button>
+            <button
+              className="advanced"
+              onClick={() => this.setState({ toggle: !this.state.toggle })}
+            >
+              Advanced
+            </button>
             <button className="search">Search</button>
           </div>
         </div>

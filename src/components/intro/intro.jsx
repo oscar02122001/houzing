@@ -1,40 +1,56 @@
 import React from "react";
-import "./intro.css";
-import Card from "./card";
+import "./style";
+import "../../../src/index.css";
+import background from "./skyper.jpg";
+
+import {
+  Container,
+  Wrapper,
+  Title,
+  MinTitle,
+  Text,
+  Button,
+  WrapIcon,
+  IconBath,
+  IconBed,
+  IconGarage,
+  IconSquar,
+} from "./style";
 
 class Intro extends React.Component {
   render() {
     return (
-      <div className="intro">
-        <div className="container intro-wrap">
-          <h3 className="intro-title">Recommended</h3>
-          <p className="intro-desc">
-            Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.
-          </p>
-          <div className="intro-cards">
-            <Card
-              title="New Apartment Nice Wiew"
-              imgUrl="https://picsum.photos/id/391/220"
-              location="Quincy St, Brooklyn, NY, USA"
-              price="$7,500/mo"
-            />
-
-            <Card
-              title="New Apartment Nice Wiew"
-              imgUrl="https://picsum.photos/id/381/220"
-              location="Quincy St, Brooklyn, NY, USA"
-              price="$7,500/mo"
-            />
-
-            <Card
-              title="New Apartment Nice Wiew"
-              imgUrl="https://picsum.photos/id/551/220"
-              location="Quincy St, Brooklyn, NY, USA"
-              price="$7,500/mo"
-            />
-          </div>
-        </div>
-      </div>
+      <Container
+        style={{
+          backgroundImage: `url(${background})`,
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <Wrapper className="container flexCentre">
+          <Title>Skyper Pool Partment</Title>
+          <Text>112 Glenwood Ave Hyde Park, Boston, MA</Text>
+          <WrapIcon>
+            <div>
+              <IconBed />
+              <Text>4 beds</Text>
+            </div>
+            <div>
+              <IconBath />
+              <Text>4 beds</Text>
+            </div>
+            <div>
+              <IconGarage />
+              <Text>4 beds</Text>
+            </div>
+            <div>
+              <IconSquar />
+              <Text>4 beds</Text>
+            </div>
+          </WrapIcon>
+          <MinTitle>$5,250/mo</MinTitle>
+          <Button>Read more</Button>
+        </Wrapper>
+      </Container>
     );
   }
 }

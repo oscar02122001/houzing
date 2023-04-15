@@ -11,3 +11,10 @@ a {
 ul {
   list-style: none;
 }
+
+.flexCentre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

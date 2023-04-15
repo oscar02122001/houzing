@@ -2,126 +2,126 @@ let info = [{
     country: 'Uzbakistan',
     ragion: 'Toshkent',
     city: 'Olmaliq',
-    zip: 2323,
+    zip: 425,
     rooms: 5,
     price: 60000
 }, {
     country: 'Uzbakistan',
     ragion: 'Toshkent',
     city: 'Chilonzor',
-    zip: 232,
+    zip: 345,
     rooms: 3,
     price: 40500
 }, {
     country: 'Uzbakistan',
     ragion: 'Toshkent',
     city: 'Chilonzor',
-    zip: 2323,
+    zip: 464,
     rooms: 5,
     price: 67000
 }, {
     country: 'Uzbakistan',
     ragion: 'Jizzax',
     city: 'Paxtakor',
-    zip: 2323,
+    zip: 786,
     rooms: 5,
     price: 30000
 }, {
     country: 'Uzbakistan',
     ragion: 'Jizzax',
     city: 'Forij',
-    zip: 2323,
+    zip: 346,
     rooms: 3,
     price: 24000
 }, {
     country: 'Uzbakistan',
     ragion: 'Jizzax',
     city: 'Dostlik',
-    zip: 2323,
+    zip: 879,
     rooms: 3,
     price: 19000
 }, {
     country: 'Uzbakistan',
     ragion: 'Qashqadaryo',
     city: 'Chiroqchi',
-    zip: 2323,
+    zip: 346,
     rooms: 4,
     price: 29000
 }, {
     country: 'Uzbakistan',
     ragion: 'Qashqadaryo',
     city: 'Qarshi',
-    zip: 2323,
+    zip: 234,
     rooms: 5,
     price: 38000
 }, {
     country: 'Uzbakistan',
     ragion: 'Samarqand',
     city: 'Urgut',
-    zip: 2323,
+    zip: 678,
     rooms: 5,
     price: 35000
 }, {
     country: 'Uzbakistan',
     ragion: 'Samarqand',
     city: 'Urgut',
-    zip: 2323,
+    zip: 345,
     rooms: 3,
     price: 20000
 }, {
     country: 'Uzbakistan',
     ragion: 'Toshkent',
     city: 'Sergili',
-    zip: 2323,
+    zip: 234,
     rooms: 3,
     price: 36000
 }, {
     country: 'Uzbakistan',
     ragion: 'Toshkent',
     city: 'Mirobod',
-    zip: 2323,
+    zip: 353,
     rooms: 5,
     price: 65000
 }, {
     country: 'Uzbakistan',
     ragion: 'Toshkent',
     city: 'Yunusobod',
-    zip: 2323,
+    zip: 353,
     rooms: 4,
     price: 48000
 }, {
     country: 'Uzbakistan',
     ragion: 'Toshkent',
     city: 'Yunusobod',
-    zip: 2323,
+    zip: 685,
     rooms: 5,
     price: 70000
 }, {
     country: 'Uzbakistan',
     ragion: 'Toshkent',
     city: 'Olmazor',
-    zip: 2323,
+    zip: 567,
     rooms: 5,
     price: 60000
 }, {
     country: 'Uzbakistan',
     ragion: 'Toshkent',
     city: 'Olmazor',
-    zip: 2323,
+    zip: 657,
     rooms: 3,
     price: 32000
 }, {
     country: 'Uzbakistan',
     ragion: 'Toshkent',
     city: 'Qoyliq',
-    zip: 2323,
+    zip: 765,
     rooms: 3,
     price: 30000
 }, {
     country: 'Uzbakistan',
     ragion: 'Toshkent',
     city: 'Yunusobod',
-    zip: 2323,
+    zip: 345,
     rooms: 2,
     price: 30000
 }]

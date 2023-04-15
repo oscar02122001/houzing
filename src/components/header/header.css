@@ -37,12 +37,21 @@
 }
 
 .search-tools {
+    position: relative;
     padding: 10px 0;
     background-color: #fff;
 }
 
+.modal-adv {
+    position: absolute;
+    width: 920px;
+    top: 100%;
+    right: 75px;
+    z-index: 5;
+}
+
+
 .input-wrap {
-    position: relative;
     flex-grow: 1;
     margin-right: 20px;
 }
@@ -54,7 +63,6 @@
 }
 
 .input-wrap::after {
-    position: absolute;
     width: 20px;
     height: 15px;
     left: 15px;
@@ -120,7 +128,7 @@
 table {
     width: 100%;
     font-size: 18px;
-    background-color: #cfe5ee;
+    background-color: #43a6cd;
     text-align: center;
 }
 
@@ -151,15 +159,13 @@ td {
     }
 }
 
+
+
 .inputs-wrap {
-    /* opacity: 0; */
-    /* position: absolute; */
+
     padding: 30px;
     width: 920px;
     height: 409px;
-    left: 389px;
-    top: 138px;
-
     background: #ffffff;
     border: 1px solid #f53308;
     border-radius: 5px;
@@ -198,6 +204,8 @@ td {
 .adress-input {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+
 }
 
 .input-title {

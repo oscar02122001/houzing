@@ -5,23 +5,27 @@ import "./header.css";
 class ModalAdvanced extends React.Component {
   state = {
     info,
-    ragion: "",
-    city: "",
-    rooms: "",
+    search: false,
   };
+  filter = {};
   render() {
-    const getInput = ({ target: { name, value } }) => {
+    const getData = ({ target: { value, name } }) => {
+      this.filter[name] = value;
       this.setState({ [name]: value });
     };
-
     const search = () => {
-      let res = info.filter(
-        (data) =>
-          data.ragion.toLowerCase() == this.state.ragion.toLowerCase() &&
-          data.rooms == this.state.rooms
-        //   data.city.toLowerCase() == this.state.city.toLowerCase()
-      );
-      this.setState({ info: res });
+      let dataInfo = [...info];
+      Object.entries(this.filter).forEach(([key, val]) => {
+        dataInfo = dataInfo.filter((data) => {
+          return `${data[key]}`?.toLowerCase().includes(val?.toLowerCase());
+        });
+        this.setState({ info: dataInfo });
+      });
+    };
+
+    const cancel = () => {
+      this.filter = {};
+      this.setState({ info: info });
     };
 
     // const show = () => {};
@@ -31,22 +35,26 @@ class ModalAdvanced extends React.Component {
           <div className="address">
             <h3 className="input-title">Address</h3>
             <div className="adress-input">
-             *<input
-                onChange={getInput}
+              <input
+                onChange={getData}
+                name="country"
+                type="text"
+                placeholder="country"
+              />
+              <input
+                onChange={getData}
                 name="ragion"
                 type="text"
                 placeholder="ragion"
               />
               <input
-                onChange={getInput}
-                disabled
+                onChange={getData}
                 name="city"
                 type="text"
                 placeholder="city"
               />
               <input
-                onChange={getInput}
-                disabled
+                onChange={getData}
                 name="zip"
                 type="text"
                 placeholder="ZIP code"
@@ -56,8 +64,8 @@ class ModalAdvanced extends React.Component {
 
           <h3 className="input-title">Apartment info</h3>
           <div className="apartment-info">
-           *<input
-              onChange={getInput}
+            <input
+              onChange={getData}
               name="rooms"
               type="text"
               placeholder="rooms"
@@ -67,31 +75,34 @@ class ModalAdvanced extends React.Component {
             <h3 className="input-title">Price</h3>
             <input
               className="prices-input"
-              onChange={getInput}
-              name="zip"
+              onChange={getData}
+              name="min"
               type="text"
               placeholder="min"
             />
             <input
               className="prices-input"
-              onChange={getInput}
-              name="zip"
+              onChange={getData}
+              name="max"
               type="text"
               placeholder="max"
             />
           </div>
           <div className="inputs-btn">
-            <button className="btn input-cancel">Cancel</button>
+            <button className="btn input-cancel" onClick={cancel}>
+              Cancel
+            </button>
             <button className="btn input-search" onClick={search}>
               Submit
             </button>
           </div>
         </div>
 
-        <div className="container finded">
+        <div className=" finded">
           <table>
             <thead>
               <tr>
+                <th>Zip</th>
                 <th>Country</th>
                 <th>Ragion</th>
                 <th>City</th>
@@ -104,6 +115,7 @@ class ModalAdvanced extends React.Component {
                 ({ country, ragion, city, zip, rooms, price }) => {
                   return (
                     <tr>
+                      <td>{zip}</td>
                       <td>{country}</td>
                       <td>{ragion}</td>
                       <td>{city}</td>

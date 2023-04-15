@@ -1,16 +1,19 @@
 import React from "react";
 import "./app.css";
-import Intro from "../intro/intro.jsx";
+// import {Container} from './style'
+import Recommend from "../recommend/recommend";
 import Headerrr from "../header/header.jsx";
-import ModalAdvanced from "../header/advanced";
+import Chose from "../choses/chose.jsx";
+import Intro from "../intro/intro";
 
 class App extends React.Component {
   render() {
     return (
-      <div className="app">
+      <div className=" app">
         <Headerrr />
         <Intro />
-        <ModalAdvanced />
+        <Recommend />
+        <Chose />
       </div>
     );
   }
