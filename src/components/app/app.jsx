@@ -1,6 +1,5 @@
 import React from "react";
 import "./app.css";
-// import {Container} from './style'
 import Recommend from "../recommend/recommend";
 import Headerrr from "../header/header.jsx";
 import Chose from "../choses/chose.jsx";

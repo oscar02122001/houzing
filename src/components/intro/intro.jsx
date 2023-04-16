@@ -1,55 +1,30 @@
 import React from "react";
 import "./style";
-import "../../../src/index.css";
+// import "../../../src/index.css";
 import background from "./skyper.jpg";
-
-import {
-  Container,
-  Wrapper,
-  Title,
-  MinTitle,
-  Text,
-  Button,
-  WrapIcon,
-  IconBath,
-  IconBed,
-  IconGarage,
-  IconSquar,
-} from "./style";
+import { Container, Slider, Next, Prev } from "./style";
+import Slides from "./slide";
 
 class Intro extends React.Component {
   render() {
     return (
-      <Container
-        style={{
-          backgroundImage: `url(${background})`,
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <Wrapper className="container flexCentre">
-          <Title>Skyper Pool Partment</Title>
-          <Text>112 Glenwood Ave Hyde Park, Boston, MA</Text>
-          <WrapIcon>
-            <div>
-              <IconBed />
-              <Text>4 beds</Text>
-            </div>
-            <div>
-              <IconBath />
-              <Text>4 beds</Text>
-            </div>
-            <div>
-              <IconGarage />
-              <Text>4 beds</Text>
-            </div>
-            <div>
-              <IconSquar />
-              <Text>4 beds</Text>
-            </div>
-          </WrapIcon>
-          <MinTitle>$5,250/mo</MinTitle>
-          <Button>Read more</Button>
-        </Wrapper>
+      <Container className="flexCentre">
+        <Slider className="flexCentre">
+          <Next />
+          <Prev />
+          <Slides
+            data={{
+              background: background,
+              title: "Skyper Pool Partment",
+              text: "112 Glenwood Ave Hyde Park, Boston, MA",
+              bed: 4,
+              bath: 5,
+              g: 1,
+              s: 1200,
+              price:5.250,
+            }}
+          />
+        </Slider>
       </Container>
     );
   }

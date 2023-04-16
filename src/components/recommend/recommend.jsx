@@ -1,6 +1,9 @@
 import React from "react";
 import "./recommend.css";
 import Card from "./card";
+import img1 from "./img/1.png";
+import img2 from "./img/2.png";
+import img3 from "./img/3.png";
 
 class Recommend extends React.Component {
   render() {
@@ -14,21 +17,21 @@ class Recommend extends React.Component {
           <div className="intro-cards">
             <Card
               title="New Apartment Nice Wiew"
-              imgUrl="https://picsum.photos/id/391/220"
+              imgUrl={img1}
               location="Quincy St, Brooklyn, NY, USA"
               price="$7,500/mo"
             />
 
             <Card
               title="New Apartment Nice Wiew"
-              imgUrl="https://picsum.photos/id/381/220"
+              imgUrl={img2}
               location="Quincy St, Brooklyn, NY, USA"
               price="$7,500/mo"
             />
 
             <Card
               title="New Apartment Nice Wiew"
-              imgUrl="https://picsum.photos/id/551/220"
+              imgUrl={img3}
               location="Quincy St, Brooklyn, NY, USA"
               price="$7,500/mo"
             />
