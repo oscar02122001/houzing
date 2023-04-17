@@ -1,5 +1,5 @@
 import React from "react";
-import "./style";
+import "./intro";
 import "../../../src/index.css";
 import {
   Image,
@@ -14,7 +14,7 @@ import {
   IconBed,
   IconGarage,
   IconSquar,
-} from "./style";
+} from "./intro-style";
 class Slides extends React.Component {
   render() {
     const { data } = this.props;
