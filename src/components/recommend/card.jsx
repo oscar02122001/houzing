@@ -1,31 +1,71 @@
 import React from "react";
-import './card.css'
+import {
+  Wrapper,
+  ImgWrap,
+  ImageUser,
+  Textwrap,
+  Feature,
+  Sale,
+  Title,
+  Disc,
+  IconsWrap,
+  IconWrap,
+  Bath,
+  Bed,
+  Squar,
+  Garage,
+  OldPrice,
+  Price,
+  ButtonIcons,
+  ResizeIcon,
+  HeartIcon,
+} from "./card-style.js";
+class Card extends React.Component {
+  render() {
+    const data = this.props;
 
-class Card extends React.Component{
-    render(){
-       const data = this.props
-    
-        return(
-            <div className="cards-wrap">
-                <div className="img">
-                    <img className="card-img" src={data.imgUrl} alt="Photo" />
-                </div>
-                <div className="text-wrap">
-                    <div className="card-title-warp">
-                        <h3 className="card-title">{data.title}</h3>
-                    </div>
-                    <div className="card-disc-warp">
-                        <h4 className="card-disc">{data.location}</h4>
-                    </div>
-                    <hr />
-                    <div className="card-price-wrap">
-                        <h4 className="old-price">$2,800/mo</h4>
-                        <h4 className="card-price">{data.price}</h4>
-                    </div>
-                </div>
-             </div>
-        )
-    }
+    return (
+      <Wrapper>
+        <ImgWrap>
+          <Feature>Featured</Feature>
+          <Sale>For Sale</Sale>
+          <img className="card-img" src={data.imgUrl} alt="Photo" />
+          <ImageUser src={data.userImg} alt="user img" />
+        </ImgWrap>
+        <Textwrap>
+          <Title>{data.title}</Title>
+          <Disc>{data.location}</Disc>
+          <IconsWrap className="flexCentre">
+            <IconWrap>
+              <Bed />
+              {data.bed} Beds
+            </IconWrap>
+            <IconWrap>
+              <Bath />
+              {data.bath} Baths
+            </IconWrap>
+            <IconWrap>
+              <Garage />
+              {data.g} Garage
+            </IconWrap>
+            <IconWrap>
+              <Squar />
+              {data.s} Sq St
+            </IconWrap>
+          </IconsWrap>
+          <hr />
+          <div className="card-price-wrap">
+            <OldPrice className="old-price">$2,800/mo</OldPrice>
+            <Price className="card-price">{data.price}</Price>
+          </div>
+          <ButtonIcons>
+            <ResizeIcon />
+            <HeartIcon />
+          </ButtonIcons>
+        </Textwrap>
+      </Wrapper>
+    );
+  }
 }
 
-export default Card
+export default Card;

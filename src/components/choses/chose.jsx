@@ -1,5 +1,5 @@
 import React from "react";
-import { Title } from "./style";
+import { Title } from "./style-choose";
 
 class Chose extends React.Component {
   render() {
