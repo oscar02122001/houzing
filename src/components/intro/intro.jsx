@@ -1,8 +1,8 @@
 import React from "react";
-import "./style";
+import "./intro";
 // import "../../../src/index.css";
 import background from "./skyper.jpg";
-import { Container, Slider, Next, Prev } from "./style";
+import { Container, Slider, Next, Prev } from "./intro-style";
 import Slides from "./slide";
 
 class Intro extends React.Component {
