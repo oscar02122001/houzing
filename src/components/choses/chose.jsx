@@ -1,12 +1,15 @@
 import React from "react";
-import { Title } from "./style-choose";
+import { Container, Title, Discription } from "./style-choose";
 
 class Chose extends React.Component {
   render() {
     return (
-      <div className="chose-wrap">
+      <Container className="chose-wrap flexCentre">
         <Title>Why Choose Us?</Title>
-      </div>
+        <Discription>
+          Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.
+        </Discription>
+      </Container>
     );
   }
 }
