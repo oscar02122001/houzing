@@ -1,5 +1,14 @@
 import React from "react";
-import { Container, Title, Discription } from "./style-choose";
+import ServiceCard from "./service-card";
+import {
+  Container,
+  Title,
+  Discription,
+  CardsWrap,
+  SmsIcon,
+  HomeIcon,
+  PhoneIcon,
+} from "./style-choose";
 
 class Chose extends React.Component {
   render() {
@@ -9,6 +18,11 @@ class Chose extends React.Component {
         <Discription>
           Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.
         </Discription>
+        <CardsWrap>
+          <ServiceCard imgg = {SmsIcon} />
+          {/* <ServiceCard data={{ img: HomeIcon }} />
+          <ServiceCard data={{ img: PhoneIcon }} /> */}
+        </CardsWrap>
       </Container>
     );
   }

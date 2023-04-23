@@ -1,12 +1,13 @@
 import React from "react";
-import {Container,Discription} from './style-choose'
+import { Container, Discription,HomeIcon} from "./style-choose";
 
-class Service extends React.Component{
-    render(){
-        return(
-            <Container>
-                
-            </Container>
-        )
-    }
+export default class ServiceCard extends React.Component {
+  render() {
+    
+    console.log(this.props);
+    return <Container>
+      {/* <img src={HomeIcon} alt="" />  */}
+       <img src={this.props.imgg} alt="" />
+    </Container>;
+  }
 }
