@@ -1,13 +1,15 @@
 import React from "react";
-import { Container, Discription,HomeIcon} from "./style-choose";
+import { Container, Discription, CardTitle } from "./style-choose";
 
 export default class ServiceCard extends React.Component {
   render() {
-    
-    console.log(this.props);
-    return <Container>
-      {/* <img src={HomeIcon} alt="" />  */}
-       <img src={this.props.imgg} alt="" />
-    </Container>;
+    let data = this.props;
+    return (
+      <div>
+        <img src={data.img} alt="" />
+        <CardTitle>{data.title}</CardTitle>
+        <Discription>{data.disc}</Discription>
+      </div>
+    );
   }
 }
