@@ -12,10 +12,12 @@ import {
 
 
 export const Container = styled.div `
-padding: 48px 0;
+background-color: #F5F7FC;;
 
 `
-
+export const Wrapper = styled.div`
+padding: 48px 0;
+`
 export const Title = styled.h3 `
 font-size: 28px;
 line-height: 36px;
