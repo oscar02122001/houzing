@@ -12,6 +12,7 @@ import {
 
 
 export const Container = styled.div `
+padding: 48px 0;
 
 `
 
@@ -23,29 +24,56 @@ letter-spacing: -0.02em;
 color: #0D263B;
 `
 
+export const CardTitle = styled.div `
+margin-top: 24px;
+margin-bottom: 8px;
+font-weight: 600;
+font-size: 18px;
+line-height: 28px;
+text-align: center;
+color: #0D263B;
+`
+
 
 
 export const Discription = styled.p `
 font-weight: 400;
 font-size: 16px;
+margin: 0;
 line-height: 24px;
 color: #696969;
-`
 
+.top-disc{
+    margin-bottom: 0;
+}
+`
+export const CardsContainer = styled.div `
+display: flex;
+margin-top: 40px;
+`
 export const CardsWrap = styled.div `
+width: calc((100% - 160px) / 3);
+text-align: center;
+margin-right: 80px;
 
+:last-of-type{
+    margin-right: 0;
+}
 `
 
-export const SmsIcon = styled(Sms)`
+export const SmsIcon = styled(Sms)
+`
 width: 45px;
 height: 49px;
 
 `
-export const HomeIcon = styled(Home)`
+export const HomeIcon = styled(Home)
+`
 height:49px;
 width: 50px;
 `
-export const PhoneIcon = styled(Phone)`
+export const PhoneIcon = styled(Phone)
+`
 height: 50px;
-width: 37.01171875px;
+width: 37px;
 `
